@@ -8,12 +8,11 @@ public class Myfirstprogram
  hello("user");
  hello("Vadim");
 
- double l = 5;
-  System.out.println("Площадб квадрата со стороно " + l + " = " + area(l));
+ Square s = new Square(5);
+  System.out.println("Площадб квадрата со стороно " + s.l + " = " + s.area());
 
- double a = 4;
- double b = 6;
-  System.out.println("Площадб прямоугольника со сторонами " + a + " и " + b + " = " + area(a, b));
+  Rectangle r = new Rectangle(4, 6);
+  System.out.println("Площадб прямоугольника со сторонами " + r.a + " и " + r.b + " = " + r.area());
 
 }
 
@@ -23,14 +22,8 @@ public static void hello(String somebody)
   System.out.println("Hello, " + somebody + "!");
 }
 
-public static double area(double len)
-{
-  return len * len;
-}
 
-public static double area(double a, double b)
-{
-  return a * b;
-}
+
+
 
 }
