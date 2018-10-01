@@ -3,24 +3,20 @@ package ru.stqa.testerjava.addressbook.appmanager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class SessionHelper
+public class SessionHelper extends HelperBase
 {
-  private FirefoxDriver wd;
+
 
   public SessionHelper(FirefoxDriver wd)
   {
+    super(wd);
 
-    this.wd = wd;
   }
 
   public void login(String username, String password)
   {
-    wd.findElement(By.name("user")).click();
-    wd.findElement(By.name("user")).clear();
-    wd.findElement(By.name("user")).sendKeys(username);
-    wd.findElement(By.name("pass")).click();
-    wd.findElement(By.name("pass")).clear();
-    wd.findElement(By.name("pass")).sendKeys(password);
+    type(By.name("user"), username);
+    type(By.name("pass"), password);
     wd.findElement(By.xpath("//form[@id='LoginForm']/input[3]")).click();
   }
 }

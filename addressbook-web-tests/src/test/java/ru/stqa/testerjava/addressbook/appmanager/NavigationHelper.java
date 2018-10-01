@@ -3,17 +3,18 @@ package ru.stqa.testerjava.addressbook.appmanager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class NavigationHelper
+public class NavigationHelper extends HelperBase
 {
-  FirefoxDriver wd;
+
 
   NavigationHelper(FirefoxDriver wd)
   {
-    this.wd = wd;
+    super(wd);
   }
 
   public void gotoGroupPage()
   {
-   wd.findElement(By.linkText("groups")).click();
+    click(By.linkText("groups"));
+
   }
 }
