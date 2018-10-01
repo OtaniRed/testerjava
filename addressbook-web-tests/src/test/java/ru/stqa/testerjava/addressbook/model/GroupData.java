@@ -1,4 +1,4 @@
-package ru.stqa.testerjava.addressbook;
+package ru.stqa.testerjava.addressbook.model;
 
 public class GroupData
 {
